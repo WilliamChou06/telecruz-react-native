@@ -1,0 +1,17 @@
+{
+  "name": "quickEmergency",
+  "displayName": "quickEmergency",
+  "expo": {
+    "name": "quickEmergency",
+    "slug": "quickEmergency",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
