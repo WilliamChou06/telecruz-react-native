@@ -5,8 +5,8 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-native-fontawesome';
 import { StyledCard, StyledText, IconView } from './styles';
 import { CategoryCardProps } from './types';
 
-const CategoryCard = ({ title, icon }: CategoryCardProps) => (
-  <StyledCard>
+const CategoryCard = ({ title, icon, onPress }: CategoryCardProps) => (
+  <StyledCard onPress={onPress}>
     <IconView>
       <Icon icon={icon} size={72} />
     </IconView>

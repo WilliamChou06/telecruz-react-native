@@ -7,6 +7,7 @@ import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
 import Home from '../Home';
+import CategoryView from '../CategoryView';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,11 @@ const App = () => (
           <Stack.Screen
             name="Home"
             component={Home}
+            options={{ title: 'TeleCruz' }}
+          />
+          <Stack.Screen
+            name="Category View"
+            component={CategoryView}
             options={{ title: 'TeleCruz' }}
           />
         </Stack.Navigator>

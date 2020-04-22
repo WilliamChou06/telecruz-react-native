@@ -5,13 +5,26 @@ import CategoryCard from '../../components/CategoryCard';
 
 import categories from '../../utils/categories';
 import HomeWrapper from './styles';
-import { CategoryInterface } from '../../types/common';
+import { CategoryInterface, NavigationInterface } from '../../types/common';
+import { HomeProps } from './types';
 
-const renderCategoryCards = (categoriesArr: CategoryInterface[]) =>
+const renderCategoryCards = (
+  categoriesArr: CategoryInterface[],
+  navigation: NavigationInterface
+) =>
   categoriesArr.map((category: CategoryInterface) => (
-    <CategoryCard key={category.title} title={category.title} icon={category.icon} />
+    <CategoryCard
+      onPress={() => navigation.navigate('Category View', {
+        categoryName: category.title
+      })}
+      key={category.title}
+      title={category.title}
+      icon={category.icon}
+    />
   ));
 
-const Home = () => <HomeWrapper>{renderCategoryCards(categories)}</HomeWrapper>;
+const Home = ({ navigation }: HomeProps) => (
+  <HomeWrapper>{renderCategoryCards(categories, navigation)}</HomeWrapper>
+);
 
 export default Home;
